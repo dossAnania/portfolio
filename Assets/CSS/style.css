@@ -66,6 +66,8 @@ header {
 
 
 nav {
+    /* display: flex; */
+    /* justify-content: end; */
     background-color: var(--nav-color);
 }
 
@@ -91,6 +93,11 @@ nav a {
 nav ul a:hover{
     background-color: var(--background-color);
 }
+
+nav img {
+    max-height: 30px;
+}
+
 
 
 /*** Body ***/
@@ -196,6 +203,10 @@ footer img {
 
 
 @media screen and (min-width: 992px) {
+
+    nav img {
+        display: none;
+    }
     .app-card {
         max-width: 60%;
     }
@@ -205,19 +216,37 @@ footer img {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 601px) {
+    nav img {
+        display: none;
+    }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 600px) {
     header h1, 
     h3, 
     p {
         text-align: center;
     }
 
-    nav ul  {
+    nav .hide {
+        display: none;       
+    }    
+    
+    nav img {
+        max-width: 30px;
+        padding: 15px;
+    }
+
+    #menu  {
         flex-flow: column wrap;
+        align-items: center;
         text-align: center;
+    }
+
+    #btn-container {
+        display: flex;
+        justify-content: end;
     }
 
     .link-title {
