@@ -8,4 +8,10 @@ Github and linkedIn links are now icons that will take you to my profile pages.
 I've tried adding a hero to add asthetic appeal but am yet to make it responsive to any screen size so it fills 100%.
 
 Link to [deployed site](https://gitme-waffles.github.io/portfolio/)
-
+- - -
+## Mobile Friendly
+![](./Assets/Images/mobile_scsh.png)
+- - -
+## Desktop
+![](./Assets/Images/home_scsh.png)
+![](./Assets/Images/portfolio-body_scsh.png)
