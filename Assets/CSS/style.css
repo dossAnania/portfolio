@@ -1,16 +1,16 @@
 
 /* 
 *** Contents *** 
-* Globals
-* Fonts
-* Header
-* Nav
-* Body
-* Footer
-* Media Queries
+* 1.0 - Globals
+* 2.0 - Fonts
+* 3.0 - Header
+* 4.0 - Nav
+* 5.0 - Body
+* 6.0 - Footer
+* 7.0 - Media Queries
 */
 
-/*** Globals ***/
+/*** 1.0 - Globals ***/
 :root {
     --background-color: #223;
     --color: #999;
@@ -25,7 +25,7 @@
     font-family: Helvetica, Arial, sans-serif;
 }
 
-/*** Fonts ***/
+/*** 2.0 - Fonts ***/
 
 h1 {
     font-size: 300%;
@@ -38,7 +38,8 @@ h2 {
 h3 {
     font-size: 350%;
     display: block;
-    padding: 30px;
+    padding: 30px 0 10px 0;
+    margin: 0 30px;
 }
 
 h5 {
@@ -51,10 +52,10 @@ nav a {
 }
 
 
-/*** Header ***/
+/*** 3.0 - Header ***/
 
 
-header {
+.hero-spacer {
     display: block;
     background-color: var(--header-color);
     padding: 60px;
@@ -62,7 +63,7 @@ header {
 }
 
 
-/*** Nav ***/
+/*** 4.0 - Nav ***/
 
 
 nav {
@@ -98,7 +99,8 @@ nav img {
 
 
 
-/*** Body ***/
+/*** 5.0 - Body ***/
+
 
 html {
     height: 100%;
@@ -120,15 +122,23 @@ body {
     position: relative;
 }
 
+.hero-text-background {
+    text-align: center;
+}
+
 .hero-text {
-    padding: 300px 0;
-	text-align: center;
+    display: inline-block;
+    padding: 30px 0;    
+    margin: 300px 0; /* determins size of hero*/
 	color: var(--color);
+    background-color: rgba(5, 5, 5, 0.5);
+    border-radius: 5px;
+
 }
 
 /* indents 'about me' text */
 h3 + p {
-    padding: 0 75px;
+    padding: 20px 75px;
 }
 
 .flexWrapper {
@@ -173,7 +183,9 @@ h3 + p {
 }
 
 
-/*** Footer ***/
+/*** 6.0 - Footer ***/
+
+
 footer {
     text-align: center;
     background-color: var(--header-color);
@@ -198,7 +210,6 @@ footer a {
     max-height: 100%;
 }
 
-/* footer a, */
 footer img {
     max-height: 30px;
     text-decoration: none;
@@ -212,14 +223,22 @@ footer img {
 
 
 
-/*** Media Queries ***/
+/*** 7.0 - Media Queries ***/
 
+
+@media screen and (min-width: 1900) {
+    /* this isn't working */
+    .hero-text{
+        margin: 450px 0;
+    }
+}
 
 @media screen and (min-width: 992px) {
 
     nav img {
         display: none;
     }
+
     .app-card {
         max-width: 60%;
     }
@@ -274,5 +293,9 @@ footer img {
 
     .cards2 {
         margin: 0 0 4% 0;
+    }
+
+    .hero-text {
+        margin: 150px 50px;
     }
 }
