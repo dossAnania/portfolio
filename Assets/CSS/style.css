@@ -121,7 +121,7 @@ body {
 }
 
 .hero-text {
-    padding: 300px;
+    padding: 300px 0;
 	text-align: center;
 	color: var(--color);
 }
